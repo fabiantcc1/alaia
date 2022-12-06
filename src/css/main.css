@@ -1,0 +1,1211 @@
+@font-face {
+    font-family: 'Roobert';
+    src: url('../fonts/roobert/Roobert-Light.otf');
+    font-style: normal;
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'Roobert';
+    src: url('../fonts/roobert/Roobert-Regular.otf');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Roobert';
+    src: url('../fonts/roobert/Roobert-SemiBold.otf');
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/museosans/MuseoSansRounded-100.otf');
+    font-style: normal;
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/museosans/MuseoSansRounded-300.otf');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/museosans/MuseoSansRounded-500.otf');
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/museosans/MuseoSansRounded-700.otf');
+    font-style: normal;
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transform-origin: center;
+}
+
+/* ----------------------
+ Helpers
+---------------------- */
+img {
+    width: 100%;
+}
+
+.interface-position{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ec811b;
+}
+
+.hiden {
+    display: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 68.75rem;
+    margin: 25px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.interfaz-transition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: .0625rem;
+    height: .0625rem;
+    border-radius: 100%;
+    background-color: #f8f8f8;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    transition: all .5s cubic-bezier(.83,.02,0,1.01);
+}
+
+.animation-courtine {
+    transform: scale(1700);
+}
+
+/* ----------------------
+ Inicio
+---------------------- */
+main {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.btn-menu-container {
+    position: absolute;
+    top:70%;
+    left: 85%;
+    z-index: 1;
+    width: 6.5vw;
+    height: 6.5vw;
+    border-radius: 50%;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.44);
+    transition: all .5s cubic-bezier(.83,.02,0,1.01);
+}
+
+.btn-menu-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.border-btn-menu {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(253,199,67,1) 0%, rgba(233,75,90,1) 50%, rgba(0,159,224,1) 100%);
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    animation: rotateLineMenu 1.8s linear infinite;
+}
+
+.btn-menu {
+    font-family: 'Roobert', Courier, monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6vw;
+    height: 6vw;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    border-radius: 50%;
+    background-color: #1d1d1b;
+    color: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+.content-home {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/inicio/bg_inicio.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.content-home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(210, 210, 210, 0.6);
+}
+
+.bg-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 37.5rem;
+    max-height: 85%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 18px 3px rgba(0,0,0,0.44);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.menu {
+    position: absolute;
+    top: calc(50% - 2.5rem);
+    left: calc(50% - 2.5rem);
+    width: 5rem;
+    height: 5rem;
+    z-index: 2;
+}
+
+.menu-item {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    transition: all .5s cubic-bezier(.83,.02,0,1.01);
+    cursor: pointer;
+}
+
+.menu-item:nth-child(1) {
+    transform: translateY(-170px);
+}
+
+.menu-item:nth-child(2) {
+    transform: rotate(60deg) translateY(-170px);
+}
+.menu-item:nth-child(2) img {
+    transform: rotate(300deg);
+}
+
+.menu-item:nth-child(3) {
+    transform: rotate(120deg) translateY(-170px);
+}
+.menu-item:nth-child(3) img {
+    transform: rotate(240deg);
+}
+
+.menu-item:nth-child(4) {
+    transform: rotate(180deg) translateY(-170px);
+}
+.menu-item:nth-child(4) img {
+    transform: rotate(180deg);
+}
+
+.menu-item:nth-child(5) {
+    transform: rotate(240deg) translateY(-170px);
+}
+.menu-item:nth-child(5) img {
+    transform: rotate(120deg);
+}
+
+.menu-item:nth-child(6) {
+    width: 7.5rem;
+    height: 7.5rem;
+    transform: rotate(300deg) translateY(-200px);
+}
+.menu-item:nth-child(6) img {
+    transform: rotate(60deg);
+}
+
+/* ----------------------
+ Section Information
+---------------------- */
+.section-info {
+    font-family: 'Roobert', Courier, monospace;
+    font-weight: 300;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f8;
+}
+
+.section-info__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/seccion_informacion/bg-header.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+}
+
+.header__logo {
+    width: 25rem;
+    margin-top: 2.5rem;
+}
+
+.section-info__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__container {
+    width: 54%;
+}
+
+.info__container p {
+    font-size: 1.25rem;
+    color: #373737;
+}
+
+.info__container p strong {
+    font-weight: 500;
+    color: #ec811b;
+}
+
+/* ----------------------
+ Section Video
+---------------------- */
+.section-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.section-video__container {
+    width: 100%;
+    height: 100%;
+}
+
+.section-video__container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.button-icon-play {
+    position: absolute;
+    top: calc(50% - 5.3125rem);
+    left: calc(50% - 5.3125rem);
+    width: 10.625rem;
+    height: 10.625rem;
+    border-radius: 50%;
+    background-color: rgba(223, 223, 223, 0.92);
+}
+
+.button-icon-play .icon-play {
+    width: 7.5rem;
+    height: 7.5rem;
+    margin-left: .75rem;
+    fill: #797979;
+}
+
+.section-video__title {
+    position: absolute;
+    top: 17%;
+    left: 8%;
+}
+
+.section-video__title h2 {
+    font-family: 'Roobert', Courier, monospace;
+    font-size: 5rem;
+    font-weight: 100;
+    line-height: 4.375rem;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.section-video__title h2 strong {
+    font-weight: 500;
+}
+
+/* ----------------------
+ Section Desarrollo
+---------------------- */
+.section-desarrollo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/seccion_desarrollo/bg_desarrollo.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+}
+
+.glass-effect {
+    background: radial-gradient(circle, rgba(0,0,0,0) 64%, rgba(255,255,255,0.7) 100%);
+}
+
+.option-living-container {
+    position: absolute;
+    top: 5%;
+    left: 6%;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-color: #e94b5a;
+}
+
+.option-living {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+    width: 100%;
+    height: 100%;
+    padding-left: 3.4375rem;
+    border-radius: 50%;
+}
+
+.option-living button {
+    font-family: 'Roobert', Courier, monospace;
+    font-size: 1.625rem;
+    font-weight: 100;
+    text-align: left;
+    text-transform: uppercase;
+    color: #f6bcb8;
+    background-color: transparent;
+    transition: all .5s cubic-bezier(.83,.02,0,1.01);
+}
+
+.option-working-container {
+    position: absolute;
+    top: 25%;
+    right: 6%;
+    width: 6.875rem;
+    height: 6.875rem;
+    border-radius: 50%;
+    background-color: #009fe0;
+    transition: all .5s cubic-bezier(.83,.02,0,1.01);
+}
+
+.option-working {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.option-shopping-container {
+    position: absolute;
+    bottom: 18%;
+    left: 8%;
+    width: 6.875rem;
+    height: 6.875rem;
+    border-radius: 50%;
+    background-color: #fdc743;
+    transition: all .5s cubic-bezier(.83,.02,0,1.01);
+}
+
+.option-shopping {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.option-shopping img,
+.option-working img {
+    width: 45%;
+    height: 45%;
+}
+
+/* -----------------------------
+ Section Desarrollo > Living > ELEMENTS
+----------------------------- */
+.title--align-right {
+    text-align: right;
+}
+
+.option-section-title {
+    line-height: 4.375rem;
+}
+
+.title--relleno {
+    font-family: 'Roobert', Courier, monospace;
+    font-size: 5.3125rem;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.title--contorno {
+    font-size: 4.5rem;
+    color: transparent;
+    -webkit-text-stroke: .0625rem #ffffff;
+}
+
+.description {
+    font-family: 'Museo Sans', Courier, monospace;
+    font-weight: 300;
+    color: #fdf0f2;
+}
+
+/* -----------------------------
+ Section Desarrollo > Living
+----------------------------- */
+.section-desarrollo__living {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.section-living-container {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    width: 100%;
+    height: 100%;
+}
+
+.section-living__top {
+    background-image: url(../images/seccion_desarrollo/section_living/bg_living.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.section-living__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(180deg, rgba(236,87,106,1) 0%, rgba(226,59,69,1) 100%);
+}
+
+.section-living__bottom::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -5.5rem;
+    width: 100%;
+    height: 5.625rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(236,87,106,1) 100%);
+}
+
+.section-living--grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.1875rem;
+}
+
+/* -----------------------------
+ Section Desarrollo > Amenidades
+----------------------------- */
+.section-desarrollo__amenidades {
+    width: 100%;
+    height: 100%;
+}
+
+.section-amenidades-container {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/seccion_desarrollo/seccion_amenidades/bg_amenidades.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.section-amenidades__right {
+    display: grid;
+    place-content: center;
+}
+
+.amenidades-content {
+    font-family: 'Roobert', Courier, monospace;
+    color: #ffffff;
+}
+
+.amenidades-content__title {
+    font-size: 4.375rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.amenidades-list {
+    font-size: 1.4375rem;
+    font-weight: 100;
+    margin-top: 1.5rem;
+}
+
+.amenidades-item::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 12px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+/* -----------------------------
+ Section Desarrollo > Plantas
+----------------------------- */
+.section-desarrollo__plantas {
+    width: 100%;
+    height: 100%;
+}
+
+.section-plantas-content {
+    width: 100%;
+    height: 100%;
+}
+
+.section-plantas-container {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(234,234,234,1) 100%);
+}
+
+.section-plantas__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.depto__container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.8vw;
+    width: 85%;
+}
+
+.depto-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.depto-button__image {
+    width: 65%;
+    margin-right: 5%;
+    text-align: left;
+}
+
+.depto-button__image img {
+    width: 48%;
+}
+
+.depto-button__image .depto-large {
+    width: 80%;
+}
+
+.depto-button__title {
+    font-family: 'Roobert', Courier, monospace;
+    font-size: 2.7vw;
+    text-transform: uppercase;
+    color: #575757;
+}
+
+.section-plantas__right {
+    display: flex;
+    align-items: center;
+    clip-path: circle(75% at 100% 50%);
+    background-color: #e94b5a;
+}
+
+.section-plantas__title-container {
+    width: 92%;
+    margin-right: 8%;
+}
+
+/* --------------------------------------
+ Section Desarrollo > Plantas > Deptos
+-------------------------------------- */
+.section-depto-content {
+    width: 100%;
+    height: 100%;
+}
+
+.section-depto-container {
+    font-family: 'Roobert', Courier, monospace;
+    display: grid;
+    grid-template-rows: 65% 35%;
+    width: 100%;
+    height: 100%;
+    color: #585858;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(234,234,234,1) 100%);
+}
+
+.section-depto-container__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #4be96d; */
+}
+
+.depto-container-top-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    /* background-color: #797979; */
+}
+
+.depto-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 15%;
+    /* background-color: #009fe0; */
+}
+
+.depto-information__top {
+    padding-left: 1.6vw;
+    border-left: 0.8vw #e94b5a solid;
+    /* background-color: chartreuse; */
+}
+
+.information-meters {
+    font-size: 6.5vw;
+    line-height: 2.5vw;
+    color: #e94b5a;
+}
+
+.information-meters sup {
+    font-size: 3.3vw;
+}
+
+.information-depto {
+    margin-top: 1.6vw;
+    font-size: 4vw;
+    text-transform: uppercase;
+}
+
+.information-betrooms {
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+.depto-information__bottom {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5vw;
+    margin-top: 6%;
+    padding-left: 3.7vw;
+}
+
+.depto-room-column {
+    font-size: 1.4vw;
+    font-weight: 300;
+}
+
+.depto-render-container {
+    position: relative;
+    width: 85%;
+}
+
+.room-option {
+    position: absolute;
+    width: 2.5vw;
+    height: 2.5vw;
+    font-size: 1.6vw;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 50%;
+    background-color: #242223;
+    color: #ffffff;
+}
+
+/* --------------------------------------
+ Section Desarrollo > Plantas > Deptos > A
+-------------------------------------- */
+#deptoAOpcionA {
+    top: 26.6%;
+    left: 23%;
+}
+
+#deptoAOpcionB {
+    top: 46.5%;
+    left: 24%;
+}
+
+#deptoAOpcionC1 {
+    top: 20%;
+    left: 47%;
+}
+
+#deptoAOpcionC2 {
+    top: 73%;
+    left: 47%;
+}
+
+#deptoAOpcionD {
+    top: 25%;
+    left: 68.3%;
+}
+
+#deptoAOpcionE {
+    top: 65%;
+    left: 26%;
+}
+
+#deptoAOpcionF {
+    top: 65%;
+    left: 68.3%;
+}
+
+/* --------------------------------------
+ Section Desarrollo > Plantas > Deptos > B
+-------------------------------------- */
+.depto-render-container.depto-render-container--deptoB {
+    width: 95%;
+}
+
+#deptoBOpcionA {
+    top: 58%;
+    left: 39.3%;
+}
+
+#deptoBOpcionB {
+    top: 42%;
+    left: 34%;
+}
+
+#deptoBOpcionC {
+    top: 68%;
+    left: 53%;
+}
+
+#deptoBOpcionD {
+    top: 54%;
+    left: 23.5%;
+}
+
+#deptoBOpcionE {
+    top: 55%;
+    left: 72%;
+}
+
+/* --------------------------------------
+ Section Desarrollo > Plantas > Deptos > C
+-------------------------------------- */
+#deptoCOpcionA {
+    top: 21%;
+    left: 9.5%;
+}
+
+#deptoCOpcionB {
+    top: 21%;
+    left: 24%;
+}
+
+#deptoCOpcionC {
+    top: 22%;
+    left: 45%;
+}
+
+#deptoCOpcionD1 {
+    top: 46%;
+    left: 16%;
+}
+
+#deptoCOpcionD2 {
+    top: 46%;
+    right: 17%;
+}
+
+#deptoCOpcionE {
+    top: 68%;
+    left: 21.5%;
+}
+
+#deptoCOpcionF1 {
+    top: 25.5%;
+    right: 26.6%;
+}
+
+#deptoCOpcionF2 {
+    top: 67.5%;
+    left: 42%;
+}
+
+#deptoCOpcionG {
+    top: 68%;
+    right: 21.5%;
+}
+
+.section-depto-container__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.depto-architecture {
+    margin-left: 25%;
+    /* background-color: violet; */
+}
+
+.depto-floor {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color: steelblue; */
+}
+
+.depto-floor__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 75%;
+    height: 45%;
+    padding-left: 4.5vw;
+    border-radius: 6.25rem 0 0 6.25rem;
+    background-color: #e94b5a;
+    color: #ffffff;
+}
+
+.depto-floor__noFloor {
+    font-size: 4vw;
+    line-height: 3.8vw;
+}
+
+.depto-floor__noDepto {
+    font-size: 1.4vw;
+    font-weight: 100;
+}
+
+
+/* -----------------------------
+ Section Desarrollo > Working
+----------------------------- */
+.section-desarrollo__working {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.section-working-container {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    width: 100%;
+    height: 100%;
+}
+
+.section-working__top {
+    background-image: url(../images/seccion_desarrollo/section_working/bg_working.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.section-working__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(180deg, rgb(1, 167, 227,1) 0%, rgb(0, 123, 213,1) 100%);
+}
+
+.section-working__bottom::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -5.5rem;
+    width: 100%;
+    height: 5.625rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgb(1, 167, 227) 100%);
+}
+
+.section-working--grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.1875rem;
+}
+
+/* -----------------------------
+ Section Desarrollo > Shoping
+----------------------------- */
+.section-desarrollo__shoping {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.section-shoping-container {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    width: 100%;
+    height: 100%;
+}
+
+.section-shoping__top {
+    background-image: url(../images/seccion_desarrollo/section_shoping/bg_shoping.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.section-shoping__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(180deg, rgb(254, 209, 80,1) 0%, rgb(254, 187, 46,1) 100%);
+}
+
+.section-shoping__bottom::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -5.5rem;
+    width: 100%;
+    height: 5.625rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgb(254, 209, 80,1) 100%);
+}
+
+.section-shoping--grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.1875rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------
+ Section Contacto
+----------------- */
+.section-contacto {
+    position: relative;
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(234,234,234,1) 100%);
+}
+
+.alaia-item {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.amarillo {
+    top: -13.125rem;
+    left: -4.6875rem;
+    width: 26.6875rem;
+    height: 31.25rem;
+    background-image: url(../images/seccion_contacto/alaia_amarillo.png);
+}
+
+.azul {
+    top: -1.875rem;
+    right: -17.8125rem;
+    width: 34.5625rem;
+    height: 31.25rem;
+    background-image: url(../images/seccion_contacto/alaia_azul.png);
+}
+
+.rojo {
+    bottom: -23.75rem;
+    left: calc(50% - 21.875rem);
+    width: 37.5rem;
+    height: 31.875rem;
+    background-image: url(../images/seccion_contacto/alaia_rojo.png);
+}
+
+.logo-quantium {
+    position: absolute;
+    bottom: 8%;
+    right: 4%;
+    width: 11.25rem;
+}
+
+.section-contacto__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+}
+
+.contacto-container__top {
+    width: 12.5rem;
+}
+
+.contacto-container__bottom {
+    font-family: 'Roobert', Courier, monospace;
+    text-align: center;
+    color: #585858;
+}
+
+.contacto-container__bottom .contacto-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.contacto-container__bottom .contacto-address {
+    font-weight: 300;
+    margin-top: .875rem;
+}
+
+
+
+
+
+
+/* ----------------------
+ Effects
+---------------------- */
+.menu-item:nth-child(1):hover {
+    transform: translateY(-180px) scale(1.2);
+}
+.menu-item:nth-child(1):active {
+    transform: translateY(-180px) scale(1.1);
+}
+
+.menu-item:nth-child(2):hover {
+    transform: rotate(60deg) translateY(-180px) scale(1.2);
+}
+.menu-item:nth-child(2):active {
+    transform: rotate(60deg) translateY(-180px) scale(1.1);
+}
+
+.menu-item:nth-child(3):hover {
+    transform: rotate(120deg) translateY(-180px) scale(1.2);
+}
+.menu-item:nth-child(3):active {
+    transform: rotate(120deg) translateY(-180px) scale(1.1);
+}
+
+.menu-item:nth-child(4):hover {
+    transform: rotate(180deg) translateY(-180px) scale(1.2);
+}
+.menu-item:nth-child(4):active {
+    transform: rotate(180deg) translateY(-180px) scale(1.1);
+}
+
+.menu-item:nth-child(5):hover {
+    transform: rotate(240deg) translateY(-180px) scale(1.2);
+}
+.menu-item:nth-child(5):active {
+    transform: rotate(240deg) translateY(-180px) scale(1.1);
+}
+
+.menu-item:nth-child(6):hover {
+    transform: rotate(300deg) translateY(-210px) scale(1.2);
+}
+.menu-item:nth-child(6):active {
+    transform: rotate(300deg) translateY(-210px) scale(1.1);
+}
+
+.option-living button:nth-child(1):hover {
+    transform: scale(1.12) translateX(18px);
+    font-weight: 500;
+    color: #ffffff;
+}
+.option-living button:nth-child(1):active {
+    transform: scale(1);
+}
+
+.option-living button:nth-child(2):hover {
+    transform: scale(1.12) translateX(18px);
+    font-weight: 500;
+    color: #ffffff;
+}
+.option-living button:nth-child(2):active {
+    transform: scale(1);
+}
+
+.option-living button:nth-child(3):hover {
+    transform: scale(1.12) translateX(18px);
+    font-weight: 500;
+    color: #ffffff;
+}
+.option-living button:nth-child(3):active {
+    transform: scale(1);
+}
+
+.option-living button:nth-child(4):hover {
+    transform: scale(1.12) translateX(18px);
+    font-weight: 500;
+    color: #ffffff;
+}
+.option-living button:nth-child(4):active {
+    transform: scale(1);
+}
+
+.option-shopping-container:hover,
+.option-working-container:hover {
+    transform: scale(1.15);
+}
+.option-shopping-container:active,
+.option-working-container:active {
+    transform: scale(1.1);
+}
+
+.btn-menu-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 3px 1px rgba(0,0,0,0.44);
+}
+.btn-menu-container:active {
+    transform: scale(1);
+    box-shadow: 0 3px 4px rgba(0,0,0,0.44);
+}
+
+/* ----------------------
+ Animations
+---------------------- */
+@keyframes rotateLineMenu {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALAIA</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="./src/css/main.css">
+</head>
+<body>
+    <main>
+        <div class="interfaz-transition hiden" id="intTransition"></div>
+
+        <div class="btn-menu-container">
+            <div class="btn-menu-content">
+                <div class="border-btn-menu"></div>
+                <button class="btn-menu" id="btnMenu">Menú</button>
+            </div>
+        </div>
+
+        <section class="content-home" id="secHome">
+            <img class="bg-menu" src="./src/images/inicio/bg_menu.png">
+    
+            <figure class="menu">
+                <div class="menu-item">
+                    <img class="menu-item-icon" src="./src/images/inicio/quantium_desarrollo.png" id="btnSecInfo">
+                </div>
+                <div class="menu-item">
+                    <img class="menu-item-icon" src="./src/images/inicio/video.png" id="btnSecVideo">
+                </div>
+                <div class="menu-item">
+                    <img class="menu-item-icon" src="./src/images/inicio/arquitecturas.png" id="btnSecArquitectura">
+                </div>
+                <div class="menu-item">
+                    <img class="menu-item-icon" src="./src/images/inicio/contacto.png" id="btnSecContacto">
+                </div>
+                <div class="menu-item">
+                    <img class="menu-item-icon" src="./src/images/inicio/galeria.png" id="btnSecGaleria">
+                </div>
+                <div class="menu-item">
+                    <img class="menu-item-icon" src="./src/images/inicio/edificio.png" id="btnSecDesarrollo">
+                </div>
+            </figure>
+        </section>
+
+        <section class="interface-position hiden" id="secInfo">
+            <div class="section-info">
+                <div class="section-info__header">
+                    <figure class="header__logo">
+                        <img src="./src/images/seccion_informacion/logo_quiantium.png" alt="Logo Quantion Desarrollos">
+                    </figure>
+                </div>
+    
+                <div class="section-info__info">
+                    <div class="info__container">
+                        <p><strong>Quantium Desarrollos</strong> creamos proyectos autosustentables cumpliendo con las exigencias en los sectores de vivienda, comercial y de oficinas.
+                        <br><br>
+                        Llevamos una relación cercana con nuestros inversionistas paso a paso, y gestionamos la totalidad de la construcción y posterior comercialización de espacios con empresas sólidas en el sector inmobiliario.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interface-position hiden" id="secVideo">
+            <div class="section-video">
+                <div class="section-video__container">
+                    <video controls poster="./src/images/seccion_video/poster_video_manifiesto.png">
+                        <source src="./src/video/alaia_video_manifiesto.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <button class="button-icon-play">
+                    <svg class="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                    </svg>
+                </button>
+
+                <div class="section-video__title">
+                    <h2>
+                        Tu nueva
+                        <br>
+                        <strong>ciudad</strong>
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="interface-position hiden" id="secDesarrollo">
+            <div class="section-desarrollo">
+                <div class="option-living-container">
+                    <div class="option-living glass-effect">
+                        <button>Living center</button>
+                        <button>Amenidades</button>
+                        <button>Plantas</button>
+                        <button>Vistas</button>
+                    </div>
+                </div>
+                
+                <button class="option-shopping-container">
+                    <div class="option-shopping glass-effect">
+                        <img src="./src/images/seccion_desarrollo/icon_shopping.png" alt="Icono de Shoping">
+                    </div>
+                </button>
+    
+                <button class="option-working-container">
+                    <div class="option-working glass-effect">
+                        <img src="./src/images/seccion_desarrollo/icon_working.png" alt="Icono de Working">
+                    </div>
+                </button>
+            </div>
+
+            <section class="section-desarrollo__living hiden">
+                <div class="section-living-container">
+                    <section class="section-living__top"></section>
+    
+                    <section class="section-living__bottom">
+                        <div class="wrapper">
+                            <div class="section-living--grid">
+                                <div class="section-living__title option-section-title">
+                                    <p class="title--relleno title--align-right">Living <br><strong class="title--contorno">Center</strong></p>
+                                </div>
+                                
+                                <div class="section-living__description">
+                                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, recusandae ullam. Repellat veritatis hic sit adipisci ut voluptatum iusto est, nisi, ratione eos facilis, neque deserunt quod? Commodi, iste eligendi?
+                                    Officiis, soluta modi labore consequuntur, laudantium nisi ipsa illo laboriosam iure nihil asperiores, maxime saepe vero atque tempore repellat nesciunt repellendus. Commodi corporis, minus perspiciatis exercitationem aspernatur veritatis vero! Vero!
+                                    Exercitationem dicta qui itaque autem magnam asperiores quo libero, iusto amet molestias consequatur soluta inventore doloremque, provident laborum mollitia error eos suscipit illum nam. Odit iure amet dolore autem ipsa?
+                                    Iusto nihil animi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <section class="section-desarrollo__amenidades hiden">
+                <div class="section-amenidades-container">
+                    <div class="section-amenidades__left"></div>
+
+                    <div class="section-amenidades__right">
+                        <div class="amenidades-content">
+                            <h2 class="amenidades-content__title">Amenidades</h2>
+
+                            <ul class="amenidades-list">
+                                <li class="amenidades-item">Lobby</li>
+                                <li class="amenidades-item">Área de asadores</li>
+                                <li class="amenidades-item">Salón de eventos</li>
+                                <li class="amenidades-item">Área de alberca</li>
+                                <li class="amenidades-item">Gimnasio exclusivo</li>
+                                <li class="amenidades-item">Control de acceso</li>
+                                <li class="amenidades-item">Elevadores exclusivos</li>
+                                <li class="amenidades-item">Acceso exclusivo a estacionamiento</li>
+                                <li class="amenidades-item">Estacionamiento privado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-desarrollo__plantas hiden">
+                <section class="section-plantas-content hiden">
+                    <div class="section-plantas-container">
+                        <section class="section-plantas__left">
+                            <div class="depto__container">
+                                <button class="depto-button">
+                                    <span class="depto-button__image">
+                                        <img src="./src/images/seccion_desarrollo/seccion_plantas/plantas_sombra/Alaia-DepaA.png" alt="Departamento A">
+                                    </span>
+                                    <span class="depto-button__title">
+                                        Depa A
+                                    </span>
+                                </button>
+                                
+                                <button class="depto-button">
+                                    <span class="depto-button__image">
+                                        <img class="depto-large" src="./src/images/seccion_desarrollo/seccion_plantas/plantas_sombra/Alaia-DepaB.png" alt="Departamento A">
+                                    </span>
+                                    <span class="depto-button__title">
+                                        Depa B
+                                    </span>
+                                </button>
+                                
+                                <button class="depto-button">
+                                    <span class="depto-button__image">
+                                        <img src="./src/images/seccion_desarrollo/seccion_plantas/plantas_sombra/Alaia-DepaC.png" alt="Departamento A">
+                                    </span>
+                                    <span class="depto-button__title">
+                                        Depa C
+                                    </span>
+                                </button>
+                            </div>
+                        </section>
+    
+                        <section class="section-plantas__right">
+                            <div class="option-section-title section-plantas__title-container">
+                                <p class="title--relleno title--align-right"><strong class="title--contorno">Vive tu</strong><br> Espacio</p>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="section-depto-content hiden" id="secDeptoA">
+                    <div class="section-depto-container">
+                        <section class="section-depto-container__top">
+                            <div class="depto-container-top-content">
+                                <div class="depto-information">
+                                    <div class="depto-information__top">
+                                        <h2 class="information-meters">59.50 M<sup>2</sup></h2>
+                                        <h3 class="information-depto">Departamento</h3>
+                                        <p class="information-betrooms">2 recámaras</p>
+                                    </div>
+    
+                                    <div class="depto-information__bottom">
+                                        <ol class="depto-room-column" type="A">
+                                            <li class="depto-room-option">Cocina</li>
+                                            <li class="depto-room-option">Comedor</li>
+                                            <li class="depto-room-option">Baño (2)</li>
+                                        </ol>
+                                        
+                                        <ol class="depto-room-column" type="A" start="4">
+                                            <li class="depto-room-option">Cuarto secundario</li>
+                                            <li class="depto-room-option">Sala</li>
+                                            <li class="depto-room-option">Cuarto principal</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="depto-render">
+                                    <div class="depto-render-container">
+                                        <img src="./src/images/seccion_desarrollo/seccion_plantas/plantas_sombra/Alaia-DepaA.png" alt="Render Departamento A">
+                                        
+                                        <button class="room-option" id="deptoAOpcionA">A</button>
+                                        <button class="room-option" id="deptoAOpcionB">B</button>
+                                        <button class="room-option" id="deptoAOpcionC1">C</button>
+                                        <button class="room-option" id="deptoAOpcionC2">C</button>
+                                        <button class="room-option" id="deptoAOpcionD">D</button>
+                                        <button class="room-option" id="deptoAOpcionE">E</button>
+                                        <button class="room-option" id="deptoAOpcionF">F</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="section-depto-container__bottom">
+                            <div class="depto-architecture">
+                                <img src="#" alt="Estacionamiento">
+                            </div>
+
+                            <div class="depto-floor">
+                                <div class="depto-floor__container">
+                                    <h3 class="depto-floor__noFloor">N7</h3>
+                                    <p class="depto-floor__noDepto">Depa 333</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="section-depto-content hiden" id="secDeptoB">
+                    <div class="section-depto-container">
+                        <section class="section-depto-container__top">
+                            <div class="depto-container-top-content">
+                                <div class="depto-information">
+                                    <div class="depto-information__top">
+                                        <h2 class="information-meters">45.05 M<sup>2</sup></h2>
+                                        <h3 class="information-depto">Departamento</h3>
+                                        <p class="information-betrooms">1 recámara</p>
+                                    </div>
+    
+                                    <div class="depto-information__bottom">
+                                        <ol class="depto-room-column" type="A">
+                                            <li class="depto-room-option">Cocina</li>
+                                            <li class="depto-room-option">Comedor</li>
+                                        </ol>
+                                        
+                                        <ol class="depto-room-column" type="A" start="3">
+                                            <li class="depto-room-option">Baño</li>
+                                            <li class="depto-room-option">Sala</li>
+                                            <li class="depto-room-option">Cuarto principal</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="depto-render">
+                                    <div class="depto-render-container depto-render-container--deptoB">
+                                        <img src="./src/images/seccion_desarrollo/seccion_plantas/plantas_sombra/Alaia-DepaB.png" alt="Render Departamento B">
+                                        
+                                        <button class="room-option" id="deptoBOpcionA">A</button>
+                                        <button class="room-option" id="deptoBOpcionB">B</button>
+                                        <button class="room-option" id="deptoBOpcionC">C</button>
+                                        <button class="room-option" id="deptoBOpcionD">D</button>
+                                        <button class="room-option" id="deptoBOpcionE">E</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="section-depto-container__bottom">
+                            <div class="depto-architecture">
+                                <img src="#" alt="Estacionamiento">
+                            </div>
+
+                            <div class="depto-floor">
+                                <div class="depto-floor__container">
+                                    <h3 class="depto-floor__noFloor">N5</h3>
+                                    <p class="depto-floor__noDepto">Depa 246</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="section-depto-content hiden" id="secDeptoC">
+                    <div class="section-depto-container">
+                        <section class="section-depto-container__top">
+                            <div class="depto-container-top-content">
+                                <div class="depto-information">
+                                    <div class="depto-information__top">
+                                        <h2 class="information-meters">90.80 M<sup>2</sup></h2>
+                                        <h3 class="information-depto">Departamento</h3>
+                                        <p class="information-betrooms">2 recámaras</p>
+                                    </div>
+    
+                                    <div class="depto-information__bottom">
+                                        <ol class="depto-room-column" type="A">
+                                            <li class="depto-room-option">Cuarto de lavado</li>
+                                            <li class="depto-room-option">Cocina</li>
+                                            <li class="depto-room-option">Comedor</li>
+                                        </ol>
+                                        
+                                        <ol class="depto-room-column" type="A" start="4">
+                                            <li class="depto-room-option">Baño (2)</li>
+                                            <li class="depto-room-option">Cuarto secundario</li>
+                                            <li class="depto-room-option">Sala (2)</li>
+                                            <li class="depto-room-option">Cuarto principal</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="depto-render">
+                                    <div class="depto-render-container">
+                                        <img src="./src/images/seccion_desarrollo/seccion_plantas/plantas_sombra/Alaia-DepaC.png" alt="Render Departamento C">
+                                        
+                                        <button class="room-option" id="deptoCOpcionA">A</button>
+                                        <button class="room-option" id="deptoCOpcionB">B</button>
+                                        <button class="room-option" id="deptoCOpcionC">C</button>
+                                        <button class="room-option" id="deptoCOpcionD1">D</button>
+                                        <button class="room-option" id="deptoCOpcionD2">D</button>
+                                        <button class="room-option" id="deptoCOpcionE">E</button>
+                                        <button class="room-option" id="deptoCOpcionF1">F</button>
+                                        <button class="room-option" id="deptoCOpcionF2">F</button>
+                                        <button class="room-option" id="deptoCOpcionG">G</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="section-depto-container__bottom">
+                            <div class="depto-architecture">
+                                <img src="#" alt="Estacionamiento">
+                            </div>
+
+                            <div class="depto-floor">
+                                <div class="depto-floor__container">
+                                    <h3 class="depto-floor__noFloor">N9</h3>
+                                    <p class="depto-floor__noDepto">Depa 380</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </section>
+
+            <section class="section-desarrollo__working hiden">
+                <div class="section-working-container">
+                    <section class="section-working__top"></section>
+    
+                    <section class="section-working__bottom">
+                        <div class="wrapper">
+                            <div class="section-working--grid">
+                                <div class="section-working__title option-section-title">
+                                    <p class="title--relleno">Working <br><strong class="title--contorno">Center</strong></p>
+                                </div>
+                                
+                                <div class="section-working__description">
+                                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, recusandae ullam. Repellat veritatis hic sit adipisci ut voluptatum iusto est, nisi, ratione eos facilis, neque deserunt quod? Commodi, iste eligendi?
+                                    Officiis, soluta modi labore consequuntur, laudantium nisi ipsa illo laboriosam iure nihil asperiores, maxime saepe vero atque tempore repellat nesciunt repellendus. Commodi corporis, minus perspiciatis exercitationem aspernatur veritatis vero! Vero!
+                                    Exercitationem dicta qui itaque autem magnam asperiores quo libero, iusto amet molestias consequatur soluta inventore doloremque, provident laborum mollitia error eos suscipit illum nam. Odit iure amet dolore autem ipsa?
+                                    Iusto nihil animi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <section class="section-desarrollo__shoping hiden">
+                <div class="section-shoping-container">
+                    <section class="section-shoping__top"></section>
+    
+                    <section class="section-shoping__bottom">
+                        <div class="wrapper">
+                            <div class="section-shoping--grid">
+                                <div class="section-shoping__title option-section-title">
+                                    <p class="title--relleno">Shoping <br><strong class="title--contorno">Center</strong></p>
+                                </div>
+                                
+                                <div class="section-shoping__description">
+                                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, recusandae ullam. Repellat veritatis hic sit adipisci ut voluptatum iusto est, nisi, ratione eos facilis, neque deserunt quod? Commodi, iste eligendi?
+                                    Officiis, soluta modi labore consequuntur, laudantium nisi ipsa illo laboriosam iure nihil asperiores, maxime saepe vero atque tempore repellat nesciunt repellendus. Commodi corporis, minus perspiciatis exercitationem aspernatur veritatis vero! Vero!
+                                    Exercitationem dicta qui itaque autem magnam asperiores quo libero, iusto amet molestias consequatur soluta inventore doloremque, provident laborum mollitia error eos suscipit illum nam. Odit iure amet dolore autem ipsa?
+                                    Iusto nihil animi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </section>
+
+        <section class="interface-position hiden" id="secContacto">
+            <div class="section-contacto">
+                <div class="alaia-item amarillo"></div>
+                <div class="alaia-item azul"></div>
+                <div class="alaia-item rojo"></div>
+                <div class="logo-quantium">
+                    <img src="./src/images/seccion_contacto/logo_color_quantium.png" alt="Logotipo de Quantium Desarrollos">
+                </div>
+
+                <section class="section-contacto__container">
+                    <div class="contacto-container__top">
+                        <img src="./src/images/seccion_contacto/logo_full_alaia.png" alt="Logotipo de Alaia">
+                    </div>
+
+                    <div class="contacto-container__bottom">
+                        <h3 class="contacto-title">Punto de venta</h3>
+                        <p class="contacto-address">
+                            Av. Paseo de los Leones N° 500, Col. Cumbres,
+                            <br>
+                            Monterrey, Nuevo León, México, C.P. 64349
+                            <br>
+                            T. (81) 2167 7003
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <script src="./src/js/main.js"></script>
+    </main>
+</body>
+</html>
