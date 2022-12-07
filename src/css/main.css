@@ -104,6 +104,12 @@ ul {
     transform: scale(1700);
 }
 
+.room-option-selected {
+    font-weight: 700;
+    color: #e94b5a;
+    transform: translate(12%, 0);
+}
+
 /* ----------------------
  Inicio
 ---------------------- */
@@ -771,7 +777,7 @@ main {
 }
 
 .depto-room-option {
-    position: relative;
+    transition: all .5s cubic-bezier(.83,.02,0,1.01);
 }
 
 .depto-render-container {
@@ -798,37 +804,37 @@ main {
 /* --------------------------------------
  Section Desarrollo > Plantas > Deptos > A
 -------------------------------------- */
-#deptoAOpcionA {
+#btnDeptoAOpcionA {
     top: 26.6%;
     left: 23%;
 }
 
-#deptoAOpcionB {
+#btnDeptoAOpcionB {
     top: 46.5%;
     left: 24%;
 }
 
-#deptoAOpcionC1 {
+#btnDeptoAOpcionC1 {
     top: 20%;
     left: 47%;
 }
 
-#deptoAOpcionC2 {
+#btnDeptoAOpcionC2 {
     top: 73%;
     left: 47%;
 }
 
-#deptoAOpcionD {
+#btnDeptoAOpcionD {
     top: 25%;
     left: 68.3%;
 }
 
-#deptoAOpcionE {
+#btnDeptoAOpcionE {
     top: 65%;
     left: 26%;
 }
 
-#deptoAOpcionF {
+#btnDeptoAOpcionF {
     top: 65%;
     left: 68.3%;
 }
@@ -840,27 +846,27 @@ main {
     width: 95%;
 }
 
-#deptoBOpcionA {
+#btnDeptoBOpcionA {
     top: 58%;
     left: 39.3%;
 }
 
-#deptoBOpcionB {
+#btnDeptoBOpcionB {
     top: 42%;
     left: 34%;
 }
 
-#deptoBOpcionC {
+#btnDeptoBOpcionC {
     top: 68%;
     left: 53%;
 }
 
-#deptoBOpcionD {
+#btnDeptoBOpcionD {
     top: 54%;
     left: 23.5%;
 }
 
-#deptoBOpcionE {
+#btnDeptoBOpcionE {
     top: 55%;
     left: 72%;
 }
@@ -868,47 +874,47 @@ main {
 /* --------------------------------------
  Section Desarrollo > Plantas > Deptos > C
 -------------------------------------- */
-#deptoCOpcionA {
+#btnDeptoCOpcionA {
     top: 21%;
     left: 9.5%;
 }
 
-#deptoCOpcionB {
+#btnDeptoCOpcionB {
     top: 21%;
     left: 24%;
 }
 
-#deptoCOpcionC {
+#btnDeptoCOpcionC {
     top: 22%;
     left: 45%;
 }
 
-#deptoCOpcionD1 {
+#btnDeptoCOpcionD1 {
     top: 46%;
     left: 16%;
 }
 
-#deptoCOpcionD2 {
+#btnDeptoCOpcionD2 {
     top: 46%;
     right: 17%;
 }
 
-#deptoCOpcionE {
+#btnDeptoCOpcionE {
     top: 68%;
     left: 21.5%;
 }
 
-#deptoCOpcionF1 {
+#btnDeptoCOpcionF1 {
     top: 25.5%;
     right: 26.6%;
 }
 
-#deptoCOpcionF2 {
+#btnDeptoCOpcionF2 {
     top: 67.5%;
     left: 42%;
 }
 
-#deptoCOpcionG {
+#btnDeptoCOpcionG {
     top: 68%;
     right: 21.5%;
 }
@@ -1292,8 +1298,8 @@ main {
     transform: translate(0, -0.5vw) scale(1.08);
     background-color: #e94b5a;
 }
-.depto-render-container button:active {
-    transform: translate(0, -0.5vw) scale(1);
+.depto-render-container button:focus {
+    transform: translate(0, -0.5vw) scale(1.05);
     background-color: #e94b5a;
 }
 

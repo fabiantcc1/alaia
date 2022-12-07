@@ -17,6 +17,57 @@ const secDeptoA = document.getElementById('secDeptoA');
 const secDeptoB = document.getElementById('secDeptoB');
 const secDeptoC = document.getElementById('secDeptoC');
 
+/* Textos Departamento A */
+const txtDeptoAOpcionA = document.getElementById('txtDeptoAOpcionA');
+const txtDeptoAOpcionB = document.getElementById('txtDeptoAOpcionB');
+const txtDeptoAOpcionC = document.getElementById('txtDeptoAOpcionC');
+const txtDeptoAOpcionD = document.getElementById('txtDeptoAOpcionD');
+const txtDeptoAOpcionE = document.getElementById('txtDeptoAOpcionE');
+const txtDeptoAOpcionF = document.getElementById('txtDeptoAOpcionF');
+
+/* Botones Departamento A */
+const btnDeptoAOpcionA = document.getElementById('btnDeptoAOpcionA');
+const btnDeptoAOpcionB = document.getElementById('btnDeptoAOpcionB');
+const btnDeptoAOpcionC1 = document.getElementById('btnDeptoAOpcionC1');
+const btnDeptoAOpcionC2 = document.getElementById('btnDeptoAOpcionC2');
+const btnDeptoAOpcionD = document.getElementById('btnDeptoAOpcionD');
+const btnDeptoAOpcionE = document.getElementById('btnDeptoAOpcionE');
+const btnDeptoAOpcionF = document.getElementById('btnDeptoAOpcionF');
+
+/* Textos Departamento B */
+const txtDeptoBOpcionA = document.getElementById('txtDeptoBOpcionA');
+const txtDeptoBOpcionB = document.getElementById('txtDeptoBOpcionB');
+const txtDeptoBOpcionC = document.getElementById('txtDeptoBOpcionC');
+const txtDeptoBOpcionD = document.getElementById('txtDeptoBOpcionD');
+const txtDeptoBOpcionE = document.getElementById('txtDeptoBOpcionE');
+
+/* Botones Departamento B */
+const btnDeptoBOpcionA = document.getElementById('btnDeptoBOpcionA');
+const btnDeptoBOpcionB = document.getElementById('btnDeptoBOpcionB');
+const btnDeptoBOpcionC = document.getElementById('btnDeptoBOpcionC');
+const btnDeptoBOpcionD = document.getElementById('btnDeptoBOpcionD');
+const btnDeptoBOpcionE = document.getElementById('btnDeptoBOpcionE');
+
+/* Textos Departamento C */
+const txtDeptoCOpcionA = document.getElementById('txtDeptoCOpcionA');
+const txtDeptoCOpcionB = document.getElementById('txtDeptoCOpcionB');
+const txtDeptoCOpcionC = document.getElementById('txtDeptoCOpcionC');
+const txtDeptoCOpcionD = document.getElementById('txtDeptoCOpcionD');
+const txtDeptoCOpcionE = document.getElementById('txtDeptoCOpcionE');
+const txtDeptoCOpcionF = document.getElementById('txtDeptoCOpcionF');
+const txtDeptoCOpcionG = document.getElementById('txtDeptoCOpcionG');
+
+/* Botones Departamento C */
+const btnDeptoCOpcionA = document.getElementById('btnDeptoCOpcionA');
+const btnDeptoCOpcionB = document.getElementById('btnDeptoCOpcionB');
+const btnDeptoCOpcionC = document.getElementById('btnDeptoCOpcionC');
+const btnDeptoCOpcionD1 = document.getElementById('btnDeptoCOpcionD1');
+const btnDeptoCOpcionD2 = document.getElementById('btnDeptoCOpcionD2');
+const btnDeptoCOpcionE = document.getElementById('btnDeptoCOpcionE');
+const btnDeptoCOpcionF1 = document.getElementById('btnDeptoCOpcionF1');
+const btnDeptoCOpcionF2 = document.getElementById('btnDeptoCOpcionF2');
+const btnDeptoCOpcionG = document.getElementById('btnDeptoCOpcionG');
+
 /* Botones de Seccion Desarrollo */
 const btnLivingCenter = document.getElementById('btnLivingCenter');
 const btnAmenidades = document.getElementById('btnAmenidades');
@@ -68,6 +119,15 @@ function changePosition(button, zIndex, top = '50%', left = '50%') {
     button.style.zIndex = zIndex;
 }
 
+function resetStyleOptionDepto() {
+    const selectedOptions = document.querySelectorAll('.room-option-selected');
+
+    selectedOptions.forEach((optionsChecked) => {
+        optionsChecked.classList.remove('room-option-selected')
+    });
+    console.log({selectedOptions});
+}
+
 
 /* Interacción de los botones flotantes */
 btnMenu.addEventListener('click', () => {
@@ -106,6 +166,8 @@ btnBackPlantas.addEventListener('click', () => {
     curtainAnimation();
 
     setTimeout(() => {
+        resetStyleOptionDepto();
+        
         changePosition(contentBtnBackDesarrollo, '1', '10%', '85%');
         changePosition(contentBtnBackPlantas, '-1');
 
@@ -310,4 +372,201 @@ btnDeptoC.addEventListener('click', () => {
         secDeptoC.classList.remove('hiden');
         intTransition.classList.remove('animation-courtine');
     }, 500);
+});
+
+
+/* Interacción de los botones del Departamento A */
+btnDeptoAOpcionA.addEventListener('click', () => {
+    txtDeptoAOpcionA.classList.add('room-option-selected');
+    txtDeptoAOpcionB.classList.remove('room-option-selected');
+    txtDeptoAOpcionC.classList.remove('room-option-selected');
+    txtDeptoAOpcionD.classList.remove('room-option-selected');
+    txtDeptoAOpcionE.classList.remove('room-option-selected');
+    txtDeptoAOpcionF.classList.remove('room-option-selected');
+});
+
+btnDeptoAOpcionB.addEventListener('click', () => {
+    txtDeptoAOpcionA.classList.remove('room-option-selected');
+    txtDeptoAOpcionB.classList.add('room-option-selected');
+    txtDeptoAOpcionC.classList.remove('room-option-selected');
+    txtDeptoAOpcionD.classList.remove('room-option-selected');
+    txtDeptoAOpcionE.classList.remove('room-option-selected');
+    txtDeptoAOpcionF.classList.remove('room-option-selected');
+});
+
+btnDeptoAOpcionC1.addEventListener('click', () => {
+    txtDeptoAOpcionA.classList.remove('room-option-selected');
+    txtDeptoAOpcionB.classList.remove('room-option-selected');
+    txtDeptoAOpcionC.classList.add('room-option-selected');
+    txtDeptoAOpcionD.classList.remove('room-option-selected');
+    txtDeptoAOpcionE.classList.remove('room-option-selected');
+    txtDeptoAOpcionF.classList.remove('room-option-selected');
+});
+
+btnDeptoAOpcionC2.addEventListener('click', () => {
+    txtDeptoAOpcionA.classList.remove('room-option-selected');
+    txtDeptoAOpcionB.classList.remove('room-option-selected');
+    txtDeptoAOpcionC.classList.add('room-option-selected');
+    txtDeptoAOpcionD.classList.remove('room-option-selected');
+    txtDeptoAOpcionE.classList.remove('room-option-selected');
+    txtDeptoAOpcionF.classList.remove('room-option-selected');
+});
+
+btnDeptoAOpcionD.addEventListener('click', () => {
+    txtDeptoAOpcionA.classList.remove('room-option-selected');
+    txtDeptoAOpcionB.classList.remove('room-option-selected');
+    txtDeptoAOpcionC.classList.remove('room-option-selected');
+    txtDeptoAOpcionD.classList.add('room-option-selected');
+    txtDeptoAOpcionE.classList.remove('room-option-selected');
+    txtDeptoAOpcionF.classList.remove('room-option-selected');
+});
+
+btnDeptoAOpcionE.addEventListener('click', () => {
+    txtDeptoAOpcionA.classList.remove('room-option-selected');
+    txtDeptoAOpcionB.classList.remove('room-option-selected');
+    txtDeptoAOpcionC.classList.remove('room-option-selected');
+    txtDeptoAOpcionD.classList.remove('room-option-selected');
+    txtDeptoAOpcionE.classList.add('room-option-selected');
+    txtDeptoAOpcionF.classList.remove('room-option-selected');
+});
+
+btnDeptoAOpcionF.addEventListener('click', () => {
+    txtDeptoAOpcionA.classList.remove('room-option-selected');
+    txtDeptoAOpcionB.classList.remove('room-option-selected');
+    txtDeptoAOpcionC.classList.remove('room-option-selected');
+    txtDeptoAOpcionD.classList.remove('room-option-selected');
+    txtDeptoAOpcionE.classList.remove('room-option-selected');
+    txtDeptoAOpcionF.classList.add('room-option-selected');
+});
+
+/* Interacción de los botones del Departamento B */
+btnDeptoBOpcionA.addEventListener('click', () => {
+    txtDeptoBOpcionA.classList.add('room-option-selected');
+    txtDeptoBOpcionB.classList.remove('room-option-selected');
+    txtDeptoBOpcionC.classList.remove('room-option-selected');
+    txtDeptoBOpcionD.classList.remove('room-option-selected');
+    txtDeptoBOpcionE.classList.remove('room-option-selected');
+});
+
+btnDeptoBOpcionB.addEventListener('click', () => {
+    txtDeptoBOpcionA.classList.remove('room-option-selected');
+    txtDeptoBOpcionB.classList.add('room-option-selected');
+    txtDeptoBOpcionC.classList.remove('room-option-selected');
+    txtDeptoBOpcionD.classList.remove('room-option-selected');
+    txtDeptoBOpcionE.classList.remove('room-option-selected');
+});
+
+btnDeptoBOpcionC.addEventListener('click', () => {
+    txtDeptoBOpcionA.classList.remove('room-option-selected');
+    txtDeptoBOpcionB.classList.remove('room-option-selected');
+    txtDeptoBOpcionC.classList.add('room-option-selected');
+    txtDeptoBOpcionD.classList.remove('room-option-selected');
+    txtDeptoBOpcionE.classList.remove('room-option-selected');
+});
+
+btnDeptoBOpcionD.addEventListener('click', () => {
+    txtDeptoBOpcionA.classList.remove('room-option-selected');
+    txtDeptoBOpcionB.classList.remove('room-option-selected');
+    txtDeptoBOpcionC.classList.remove('room-option-selected');
+    txtDeptoBOpcionD.classList.add('room-option-selected');
+    txtDeptoBOpcionE.classList.remove('room-option-selected');
+});
+
+btnDeptoBOpcionE.addEventListener('click', () => {
+    txtDeptoBOpcionA.classList.remove('room-option-selected');
+    txtDeptoBOpcionB.classList.remove('room-option-selected');
+    txtDeptoBOpcionC.classList.remove('room-option-selected');
+    txtDeptoBOpcionD.classList.remove('room-option-selected');
+    txtDeptoBOpcionE.classList.add('room-option-selected');
+});
+
+/* Interacción de los botones del Departamento C */
+btnDeptoCOpcionA.addEventListener('click', () => {
+    txtDeptoCOpcionA.classList.add('room-option-selected');
+    txtDeptoCOpcionB.classList.remove('room-option-selected');
+    txtDeptoCOpcionC.classList.remove('room-option-selected');
+    txtDeptoCOpcionD.classList.remove('room-option-selected');
+    txtDeptoCOpcionE.classList.remove('room-option-selected');
+    txtDeptoCOpcionF.classList.remove('room-option-selected');
+    txtDeptoCOpcionG.classList.remove('room-option-selected');
+});
+
+btnDeptoCOpcionB.addEventListener('click', () => {
+    txtDeptoCOpcionA.classList.remove('room-option-selected');
+    txtDeptoCOpcionB.classList.add('room-option-selected');
+    txtDeptoCOpcionC.classList.remove('room-option-selected');
+    txtDeptoCOpcionD.classList.remove('room-option-selected');
+    txtDeptoCOpcionE.classList.remove('room-option-selected');
+    txtDeptoCOpcionF.classList.remove('room-option-selected');
+    txtDeptoCOpcionG.classList.remove('room-option-selected');
+});
+
+btnDeptoCOpcionC.addEventListener('click', () => {
+    txtDeptoCOpcionA.classList.remove('room-option-selected');
+    txtDeptoCOpcionB.classList.remove('room-option-selected');
+    txtDeptoCOpcionC.classList.add('room-option-selected');
+    txtDeptoCOpcionD.classList.remove('room-option-selected');
+    txtDeptoCOpcionE.classList.remove('room-option-selected');
+    txtDeptoCOpcionF.classList.remove('room-option-selected');
+    txtDeptoCOpcionG.classList.remove('room-option-selected');
+});
+
+btnDeptoCOpcionD1.addEventListener('click', () => {
+    txtDeptoCOpcionA.classList.remove('room-option-selected');
+    txtDeptoCOpcionB.classList.remove('room-option-selected');
+    txtDeptoCOpcionC.classList.remove('room-option-selected');
+    txtDeptoCOpcionD.classList.add('room-option-selected');
+    txtDeptoCOpcionE.classList.remove('room-option-selected');
+    txtDeptoCOpcionF.classList.remove('room-option-selected');
+    txtDeptoCOpcionG.classList.remove('room-option-selected');
+});
+
+btnDeptoCOpcionD2.addEventListener('click', () => {
+    txtDeptoCOpcionA.classList.remove('room-option-selected');
+    txtDeptoCOpcionB.classList.remove('room-option-selected');
+    txtDeptoCOpcionC.classList.remove('room-option-selected');
+    txtDeptoCOpcionD.classList.add('room-option-selected');
+    txtDeptoCOpcionE.classList.remove('room-option-selected');
+    txtDeptoCOpcionF.classList.remove('room-option-selected');
+    txtDeptoCOpcionG.classList.remove('room-option-selected');
+});
+
+btnDeptoCOpcionE.addEventListener('click', () => {
+    txtDeptoCOpcionA.classList.remove('room-option-selected');
+    txtDeptoCOpcionB.classList.remove('room-option-selected');
+    txtDeptoCOpcionC.classList.remove('room-option-selected');
+    txtDeptoCOpcionD.classList.remove('room-option-selected');
+    txtDeptoCOpcionE.classList.add('room-option-selected');
+    txtDeptoCOpcionF.classList.remove('room-option-selected');
+    txtDeptoCOpcionG.classList.remove('room-option-selected');
+});
+
+btnDeptoCOpcionF1.addEventListener('click', () => {
+    txtDeptoCOpcionA.classList.remove('room-option-selected');
+    txtDeptoCOpcionB.classList.remove('room-option-selected');
+    txtDeptoCOpcionC.classList.remove('room-option-selected');
+    txtDeptoCOpcionD.classList.remove('room-option-selected');
+    txtDeptoCOpcionE.classList.remove('room-option-selected');
+    txtDeptoCOpcionF.classList.add('room-option-selected');
+    txtDeptoCOpcionG.classList.remove('room-option-selected');
+});
+
+btnDeptoCOpcionF2.addEventListener('click', () => {
+    txtDeptoCOpcionA.classList.remove('room-option-selected');
+    txtDeptoCOpcionB.classList.remove('room-option-selected');
+    txtDeptoCOpcionC.classList.remove('room-option-selected');
+    txtDeptoCOpcionD.classList.remove('room-option-selected');
+    txtDeptoCOpcionE.classList.remove('room-option-selected');
+    txtDeptoCOpcionF.classList.add('room-option-selected');
+    txtDeptoCOpcionG.classList.remove('room-option-selected');
+});
+
+btnDeptoCOpcionG.addEventListener('click', () => {
+    txtDeptoCOpcionA.classList.remove('room-option-selected');
+    txtDeptoCOpcionB.classList.remove('room-option-selected');
+    txtDeptoCOpcionC.classList.remove('room-option-selected');
+    txtDeptoCOpcionD.classList.remove('room-option-selected');
+    txtDeptoCOpcionE.classList.remove('room-option-selected');
+    txtDeptoCOpcionF.classList.remove('room-option-selected');
+    txtDeptoCOpcionG.classList.add('room-option-selected');
 });
