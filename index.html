@@ -11,18 +11,36 @@
 <body>
     <main>
         <div class="interfaz-transition hiden" id="intTransition"></div>
-
-        <div class="btn-menu-container">
+        
+        <div class="btn-menu-container" id="contentBtnMenu">
             <div class="btn-menu-content">
                 <div class="border-btn-menu"></div>
                 <button class="btn-menu" id="btnMenu">Menú</button>
             </div>
         </div>
 
+        <div class="btn-menu-container" id="contentBtnBackDesarrollo">
+            <div class="btn-menu-content">
+                <div class="border-btn-menu"></div>
+                <button class="btn-menu" id="btnBackDesarrollo">
+                    <img class="back-arrow" src="./src/images/inicio/back_arrow.png" alt="Regresar al menu de Desarrollo">
+                </button>
+            </div>
+        </div>
+        
+        <div class="btn-menu-container" id="contentBtnBackPlantas">
+            <div class="btn-menu-content">
+                <div class="border-btn-menu"></div>
+                <button class="btn-menu" id="btnBackPlantas">
+                    <img class="back-arrow" src="./src/images/inicio/back_arrow.png" alt="Regresar al menu de Plantas">
+                </button>
+            </div>
+        </div>
+
         <section class="content-home" id="secHome">
             <img class="bg-menu" src="./src/images/inicio/bg_menu.png">
     
-            <figure class="menu">
+            <section class="menu">
                 <div class="menu-item">
                     <img class="menu-item-icon" src="./src/images/inicio/quantium_desarrollo.png" id="btnSecInfo">
                 </div>
@@ -41,7 +59,7 @@
                 <div class="menu-item">
                     <img class="menu-item-icon" src="./src/images/inicio/edificio.png" id="btnSecDesarrollo">
                 </div>
-            </figure>
+            </section>
         </section>
 
         <section class="interface-position hiden" id="secInfo">
@@ -87,30 +105,30 @@
         </section>
 
         <section class="interface-position hiden" id="secDesarrollo">
-            <div class="section-desarrollo">
+            <section class="section-desarrollo" id="secDesarrolloHome">
                 <div class="option-living-container">
                     <div class="option-living glass-effect">
-                        <button>Living center</button>
-                        <button>Amenidades</button>
-                        <button>Plantas</button>
-                        <button>Vistas</button>
+                        <button id="btnLivingCenter">Living center</button>
+                        <button id="btnAmenidades">Amenidades</button>
+                        <button id="btnPlantas">Plantas</button>
+                        <button id="btnVistas">Vistas</button>
                     </div>
                 </div>
                 
-                <button class="option-shopping-container">
+                <button class="option-shopping-container" id="btnShopingCenter">
                     <div class="option-shopping glass-effect">
                         <img src="./src/images/seccion_desarrollo/icon_shopping.png" alt="Icono de Shoping">
                     </div>
                 </button>
     
-                <button class="option-working-container">
+                <button class="option-working-container" id="btnWorkingCenter">
                     <div class="option-working glass-effect">
                         <img src="./src/images/seccion_desarrollo/icon_working.png" alt="Icono de Working">
                     </div>
                 </button>
-            </div>
+            </section>
 
-            <section class="section-desarrollo__living hiden">
+            <section class="section-desarrollo__living hiden" id="secLivingCenter">
                 <div class="section-living-container">
                     <section class="section-living__top"></section>
     
@@ -133,7 +151,7 @@
                 </div>
             </section>
 
-            <section class="section-desarrollo__amenidades hiden">
+            <section class="section-desarrollo__amenidades hiden" id="secAnemidades">
                 <div class="section-amenidades-container">
                     <div class="section-amenidades__left"></div>
 
@@ -157,36 +175,48 @@
                 </div>
             </section>
 
-            <section class="section-desarrollo__plantas hiden">
-                <section class="section-plantas-content hiden">
+            <section class="section-desarrollo__plantas hiden" id="secPlantas">
+                <section class="section-plantas-content" id="secPlantasHome">
                     <div class="section-plantas-container">
                         <section class="section-plantas__left">
                             <div class="depto__container">
-                                <button class="depto-button">
-                                    <span class="depto-button__image">
+                                <button class="depto-button" id="btnDeptoA">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <div class="depto-button__image">
                                         <img src="./src/images/seccion_desarrollo/seccion_plantas/plantas_sombra/Alaia-DepaA.png" alt="Departamento A">
-                                    </span>
-                                    <span class="depto-button__title">
+                                    </div>
+                                    <div class="depto-button__title">
                                         Depa A
-                                    </span>
+                                    </div>
                                 </button>
                                 
-                                <button class="depto-button">
-                                    <span class="depto-button__image">
+                                <button class="depto-button" id="btnDeptoB">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <div class="depto-button__image">
                                         <img class="depto-large" src="./src/images/seccion_desarrollo/seccion_plantas/plantas_sombra/Alaia-DepaB.png" alt="Departamento A">
-                                    </span>
-                                    <span class="depto-button__title">
+                                    </div>
+                                    <div class="depto-button__title">
                                         Depa B
-                                    </span>
+                                    </div>
                                 </button>
                                 
-                                <button class="depto-button">
-                                    <span class="depto-button__image">
+                                <button class="depto-button" id="btnDeptoC">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <div class="depto-button__image">
                                         <img src="./src/images/seccion_desarrollo/seccion_plantas/plantas_sombra/Alaia-DepaC.png" alt="Departamento A">
-                                    </span>
-                                    <span class="depto-button__title">
+                                    </div>
+                                    <div class="depto-button__title">
                                         Depa C
-                                    </span>
+                                    </div>
                                 </button>
                             </div>
                         </section>
@@ -371,7 +401,7 @@
                 </section>
             </section>
 
-            <section class="section-desarrollo__working hiden">
+            <section class="section-desarrollo__working hiden" id="secWorkingCenter">
                 <div class="section-working-container">
                     <section class="section-working__top"></section>
     
@@ -394,7 +424,7 @@
                 </div>
             </section>
 
-            <section class="section-desarrollo__shoping hiden">
+            <section class="section-desarrollo__shoping hiden" id="secShopingCenter">
                 <div class="section-shoping-container">
                     <section class="section-shoping__top"></section>
     

@@ -41,6 +41,10 @@
     font-weight: 700;
 }
 
+:root {
+    --line-width: .2vw;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -73,7 +77,7 @@ button {
 }
 
 .wrapper {
-    width: 90%;
+    width: 80%;
     max-width: 68.75rem;
     margin: 25px 0;
 }
@@ -89,7 +93,8 @@ ul {
     width: .0625rem;
     height: .0625rem;
     border-radius: 100%;
-    background-color: #f8f8f8;
+    box-shadow: 0 0 .0625rem rgba(29, 29, 27, 0.486);
+    background-color: #f0f0f0;
     z-index: 2;
     transform: translate(-50%, -50%);
     transition: all .5s cubic-bezier(.83,.02,0,1.01);
@@ -111,14 +116,12 @@ main {
 
 .btn-menu-container {
     position: absolute;
-    top:70%;
-    left: 85%;
-    z-index: 1;
+    z-index: -1;
     width: 6.5vw;
     height: 6.5vw;
     border-radius: 50%;
     box-shadow: 0 3px 4px rgba(0,0,0,0.44);
-    transition: all .5s cubic-bezier(.83,.02,0,1.01);
+    transition: transform .5s cubic-bezier(.83,.02,0,1.01);
 }
 
 .btn-menu-content {
@@ -151,6 +154,10 @@ main {
     background-color: #1d1d1b;
     color: #ffffff;
     transform: translate(-50%, -50%);
+}
+
+.back-arrow {
+    width: 50%;
 }
 
 .content-home {
@@ -605,15 +612,53 @@ main {
 }
 
 .depto-button {
+    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
     background-color: transparent;
+    overflow: hidden;
+    transition: all .8s cubic-bezier(.83,.02,0,1.01);
+}
+
+.depto-button span {
+    display: inline-block;
+    position: absolute;
+    background: #1d1d1b;
+    transition: all 1s cubic-bezier(.83,.02,0,1.01);
+}
+
+.depto-button span:nth-child(1) {
+    width: 100%;
+    height: var(--line-width);
+    top: 0;
+    left: -100%;
+}
+
+.depto-button span:nth-child(2) {
+    width: 100%;
+    height: var(--line-width);
+    bottom: 0;
+    right: -100%;
+}
+
+.depto-button span:nth-child(3) {
+    width: var(--line-width);
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+}
+
+.depto-button span:nth-child(4) {
+    width: var(--line-width);
+    height: 100%;
+    top: -100%;
+    right: 0;
 }
 
 .depto-button__image {
     width: 65%;
-    margin-right: 5%;
+    margin: 0 5% 0 5%;
     text-align: left;
 }
 
@@ -725,6 +770,10 @@ main {
     font-weight: 300;
 }
 
+.depto-room-option {
+    position: relative;
+}
+
 .depto-render-container {
     position: relative;
     width: 85%;
@@ -740,6 +789,10 @@ main {
     border-radius: 50%;
     background-color: #242223;
     color: #ffffff;
+}
+
+.depto-render-container button{
+    transition: all 0.6s cubic-bezier(.83,.02,0,1.01);
 }
 
 /* --------------------------------------
@@ -1196,6 +1249,52 @@ main {
 .btn-menu-container:active {
     transform: scale(1);
     box-shadow: 0 3px 4px rgba(0,0,0,0.44);
+}
+
+.depto-button:hover span:nth-child(1) {
+    left: 0;
+}
+.depto-button:active span:nth-child(1) {
+    left: 0;
+}
+
+.depto-button:hover span:nth-child(2) {
+    right: 0;
+}
+.depto-button:active span:nth-child(2) {
+    right: 0;
+}
+
+.depto-button:hover span:nth-child(3) {
+    bottom: 0;
+}
+.depto-button:active span:nth-child(3) {
+    bottom: 0;
+}
+
+.depto-button:hover span:nth-child(4) {
+    top: 0;
+}
+.depto-button:active span:nth-child(4) {
+    top: 0;
+}
+
+.depto-button:hover {
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.44);
+    transform: translate(8%, 0);
+}
+.depto-button:active {
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.44);
+    transform: translate(8%, 0);
+}
+
+.depto-render-container button:hover {
+    transform: translate(0, -0.5vw) scale(1.08);
+    background-color: #e94b5a;
+}
+.depto-render-container button:active {
+    transform: translate(0, -0.5vw) scale(1);
+    background-color: #e94b5a;
 }
 
 /* ----------------------
