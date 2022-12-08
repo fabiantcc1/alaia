@@ -618,6 +618,11 @@ main {
     margin-top: 1.5rem;
 }
 
+.amenidades-item {
+    position: relative;
+    overflow: hidden;
+}
+
 .amenidades-item::before {
     content: '';
     display: inline-block;
@@ -626,6 +631,17 @@ main {
     margin-right: 12px;
     border-radius: 50%;
     background-color: #ffffff;
+    transition: all 1s cubic-bezier(.83,.02,0,1.01);
+}
+
+.amenidades-item span {
+    position: absolute;
+    bottom: 0;
+    left: -60%;
+    width: 60%;
+    height: 0.1vw;
+    background-color: #ffffff;
+    transition: all 1s cubic-bezier(.83,.02,0,1.01);
 }
 
 /* -----------------------------
@@ -1296,6 +1312,18 @@ main {
 }
 .option-living button:nth-child(4):active {
     transform: scale(1);
+}
+
+.amenidades-item:hover span {
+    left: 6%;
+}
+.amenidades-item:focus span {
+    left: 6%;
+}
+
+.amenidades-item:hover::before {
+    background-color: #ec811b;
+    box-shadow: 0 0 1px rgba(29, 29, 27, 0.541);
 }
 
 .option-shopping-container:hover,
