@@ -148,6 +148,10 @@ ul {
     transform: translate(12%, 0);
 }
 
+.transition-title-video {
+    transform: translate(-150%);
+}
+
 /* ----------------------
  Inicio
 ---------------------- */
@@ -370,6 +374,7 @@ main {
     height: 10.625rem;
     border-radius: 50%;
     background-color: rgba(223, 223, 223, 0.92);
+    transition: all .5s cubic-bezier(.83,.02,0,1.01);
 }
 
 .button-icon-play .icon-play {
@@ -377,12 +382,14 @@ main {
     height: 7.5rem;
     margin-left: .75rem;
     fill: #797979;
+    transition: all .5s cubic-bezier(.83,.02,0,1.01);
 }
 
 .section-video__title {
     position: absolute;
     top: 17%;
     left: 8%;
+    transition: all 1s cubic-bezier(.83,.02,0,1.01);
 }
 
 .section-video__title h2 {
@@ -1239,6 +1246,20 @@ main {
 }
 .menu-item:nth-child(6):active {
     transform: rotate(300deg) translateY(-210px) scale(1.1);
+}
+
+.button-icon-play:hover {
+    transform: scale(1.05);
+}
+.button-icon-play:active {
+    transform: scale(1.01);
+}
+
+.button-icon-play .icon-play:hover {
+    transform: scale(1.1);
+}
+.button-icon-play .icon-play:active {
+    transform: scale(1.06);
 }
 
 .option-living button:nth-child(1):hover {

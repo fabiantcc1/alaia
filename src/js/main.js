@@ -109,6 +109,12 @@ const btnBackPlantas = document.getElementById('btnBackPlantas');
 /* Seccion de transición para las interfaces */
 const intTransition = document.getElementById('intTransition');
 
+/* Video Manifiesto */
+const btnPlay = document.getElementById('btnPlay');
+const videoTitle = document.getElementById('videoTitle');
+const videoManifiesto = document.getElementById('videoManifiesto');
+
+
 /* Funciones */
 function curtainAnimation(){
     intTransition.classList.remove('hiden');
@@ -137,12 +143,30 @@ function resetStyleOptionDepto() {
     console.log({selectedOptions});
 }
 
+function animateVideoItems(opacity, isActive) {
+    btnPlay.style.opacity = opacity;
+
+    if(isActive) {
+        btnPlay.classList.add('hiden');
+        videoTitle.classList.add('transition-title-video');
+    }
+    else {
+        btnPlay.classList.remove('hiden');
+        videoTitle.classList.remove('transition-title-video');
+    }
+}
+
 
 /* Interacción de los botones flotantes */
 btnMenu.addEventListener('click', () => {
     curtainAnimation();
 
     setTimeout(() => {
+        if(!secVideo.classList.contains('hiden')) {
+            videoManifiesto.load();
+            animateVideoItems(1, false);
+        }
+
         changePosition(contentBtnMenu, '-1', '70%', '85%');
 
         secHome.classList.remove('hiden');
@@ -248,6 +272,19 @@ btnSecContacto.addEventListener('click', () => {
         secContacto.classList.remove('hiden');
         intTransition.classList.remove('animation-courtine');
     }, 500);
+});
+
+/* Interaccion del boton de video */
+btnPlay.addEventListener('click', () => {
+    videoManifiesto.play();
+});
+
+videoManifiesto.addEventListener('play', () => {
+    animateVideoItems(0, true);
+});
+
+videoManifiesto.addEventListener('pause', () => {
+    animateVideoItems(1, false);
 });
 
 /* Interacción de los botones de Desarollo */
