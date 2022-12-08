@@ -1,3 +1,12 @@
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    preloader.classList.add('end-preloader');
+
+    setTimeout(() => {
+        preloader.classList.add('hiden');
+    }, 4000)
+})
+
 /* Secciones */
 const secHome = document.getElementById('secHome');
 const secInfo = document.getElementById('secInfo');

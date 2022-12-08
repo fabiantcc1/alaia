@@ -10,6 +10,10 @@
 </head>
 <body>
     <main>
+        <div class="preloader" id="preloader">
+            <div class="spinner"></div>
+        </div>
+        
         <div class="interfaz-transition hiden" id="intTransition"></div>
         
         <div class="btn-menu-container" id="contentBtnMenu">
@@ -83,7 +87,7 @@
         <section class="interface-position hiden" id="secVideo">
             <div class="section-video">
                 <div class="section-video__container">
-                    <video controls poster="./src/images/seccion_video/poster_video_manifiesto.png">
+                    <video controls poster="./src/images/seccion_video/poster_video_manifiesto.png" id="videoManifiesto">
                         <source src="./src/video/alaia_video_manifiesto.mp4" type="video/mp4">
                     </video>
                 </div>
