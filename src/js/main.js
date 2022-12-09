@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
 
     setTimeout(() => {
         preloader.classList.add('hiden');
-    }, 4000)
+    }, 2000)
 })
 
 /* Secciones */
@@ -13,6 +13,7 @@ const secInfo = document.getElementById('secInfo');
 const secVideo = document.getElementById('secVideo');
 const secDesarrollo = document.getElementById('secDesarrollo');
 const secContacto = document.getElementById('secContacto');
+const secGaleria = document.getElementById('secGaleria');
 /* Seccion Desarrollo */
 const secDesarrolloHome = document.getElementById('secDesarrolloHome');
 const secLivingCenter = document.getElementById('secLivingCenter');
@@ -114,7 +115,6 @@ const intTransition = document.getElementById('intTransition');
 const btnPlay = document.getElementById('btnPlay');
 const videoTitle = document.getElementById('videoTitle');
 const videoManifiesto = document.getElementById('videoManifiesto');
-
 
 /* Funciones */
 function curtainAnimation(){
@@ -276,6 +276,20 @@ btnSecContacto.addEventListener('click', () => {
         secDesarrollo.classList.add('hiden');
         secContacto.classList.remove('hiden');
         intTransition.classList.remove('animation-courtine');
+    }, 500);
+});
+
+btnSecGaleria.addEventListener('click', () => {
+    intTransition.classList.remove('hiden');
+
+    setTimeout(() => {
+        intTransition.classList.add('animation-courtine');
+    }, 50);
+
+    setTimeout(() => {
+        changePosition(contentBtnMenu, '2', '10%', '85%');
+
+        location.href = './galeria.html';
     }, 500);
 });
 
