@@ -18,6 +18,7 @@ const secDesarrolloHome = document.getElementById('secDesarrolloHome');
 const secLivingCenter = document.getElementById('secLivingCenter');
 const secAnemidades = document.getElementById('secAnemidades');
 const secPlantas = document.getElementById('secPlantas');
+const secVistas = document.getElementById('secVistas');
 const secWorkingCenter = document.getElementById('secWorkingCenter');
 const secShopingCenter = document.getElementById('secShopingCenter');
 /* Seccion Desarrollo */
@@ -182,6 +183,10 @@ btnBackDesarrollo.addEventListener('click', () => {
     curtainAnimation();
 
     setTimeout(() => {
+        if(secVistas.classList.contains('show-gallery')){
+            secVistas.classList.remove('show-gallery');
+        }
+
         changePosition(contentBtnMenu, '1', '70%', '85%');
         changePosition(contentBtnBackDesarrollo, '-1');
 
@@ -333,6 +338,24 @@ btnPlantas.addEventListener('click', () => {
         secLivingCenter.classList.add('hiden');
         secAnemidades.classList.add('hiden');
         secPlantas.classList.remove('hiden');
+        secWorkingCenter.classList.add('hiden');
+        secShopingCenter.classList.add('hiden');
+        intTransition.classList.remove('animation-courtine');
+    }, 500);
+});
+
+btnVistas.addEventListener('click', () => {
+    curtainAnimation();
+
+    setTimeout(() => {
+        changePosition(contentBtnBackDesarrollo, '2', '6%', '3%');
+        changePosition(contentBtnMenu, '-1');
+
+        secDesarrolloHome.classList.add('hiden');
+        secLivingCenter.classList.add('hiden');
+        secAnemidades.classList.add('hiden');
+        secPlantas.classList.add('hiden');
+        secVistas.classList.add('show-gallery');
         secWorkingCenter.classList.add('hiden');
         secShopingCenter.classList.add('hiden');
         intTransition.classList.remove('animation-courtine');

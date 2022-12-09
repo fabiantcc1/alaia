@@ -49,7 +49,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transform-origin: center;
 }
 
 /* ----------------------
@@ -68,6 +67,14 @@ img {
 
 .hiden {
     display: none;
+}
+
+.hiden-gallery {
+    z-index: -1;
+}
+
+.show-gallery {
+    z-index: 1;
 }
 
 button {
@@ -133,7 +140,7 @@ ul {
     border-radius: 100%;
     box-shadow: 0 0 .0625rem rgba(29, 29, 27, 0.486);
     background-color: #f0f0f0;
-    z-index: 2;
+    z-index: 3;
     transform: translate(-50%, -50%);
     transition: all .5s cubic-bezier(.83,.02,0,1.01);
 }
@@ -1020,6 +1027,118 @@ main {
     font-weight: 100;
 }
 
+/* --------------------------------------
+ Section Desarrollo > Vistas
+-------------------------------------- */
+.section-desarrollo__vistas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/seccion_desarrollo/seccion-vistas/amenidades_terraza_v4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel .carousel-cell {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel .carousel-cell .inner {
+    font-family: 'Roobert', Courier, monospace;
+    position: relative;
+    top: 50%;
+    text-align: center;
+    color: #ffffff;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel-cell .inner .title {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0.6vw 2vw;
+    font-size: 5vw;
+    font-weight: 100;
+    letter-spacing: 2vw;
+    text-shadow: -0.3vw 0.2vw 0.4vw rgba(29, 29, 27, 0.767);
+    text-transform: uppercase;
+}
+
+.carousel .carousel-cell .inner .subtitle {
+    padding: 0.6vw 0 0 2vw;
+    font-size: 2.5vw;
+    font-weight: 100;
+    letter-spacing: 1vw;
+    text-shadow: -0.2vw 0.2vw 0.4vw rgba(29, 29, 27, 0.767);
+    text-transform: uppercase;
+}
+
+.carousel .carousel-cell .inner .title span {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 65%;
+    height: .2vw;
+    box-shadow: -.0625rem .0625rem 5px rgba(29, 29, 27, 0.733);
+    background-color: #ffffff;
+    transform: translateX(-50%);
+}
+
+.carousel .flickity-prev-next-button {
+    width: 3.75rem;
+    height: 3.75rem;
+    margin: .5rem;
+    border-radius: 50%;
+    border: .0625rem #ffffff solid;
+    background: transparent;
+    
+}
+.carousel .flickity-prev-next-button .arrow {
+    fill: #ffffff;
+}
+
+.carousel .flickity-prev-next-button svg {
+    padding: .3125rem;
+}
+
+.carousel .flickity-page-dots {
+    bottom: 1vw;
+}
+
+.carousel .flickity-page-dots .dot {
+    width: .75rem;
+    height: .75rem;
+    margin: 0 .25rem;
+    background-color: #ffffff;
+    opacity: 1;
+}
+
+.carousel .flickity-page-dots .dot.is-selected {
+    border: 1px #ffffff solid;
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* -----------------------------
  Section Desarrollo > Working
@@ -1388,6 +1507,11 @@ main {
 .depto-render-container button:focus {
     transform: translate(0, -0.5vw) scale(1.05);
     background-color: #e94b5a;
+}
+
+.flickity-button:focus {
+    outline: 0px;
+    box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.445);
 }
 
 /* ----------------------
